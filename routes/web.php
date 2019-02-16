@@ -12,10 +12,19 @@
 */
 
 Route::get('/', function () {
-  return redirect('home');
+  // return redirect('home');
+  return view('welcome');
 });
+
+Route::get('/theme','VisitorsController@index');
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::resource('resources', 'ResourceController');
+
+Route::resource('regions', 'RegionController');
+
+Route::resource('locations', 'LocationController');

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>InfyOm Generator</title>
+    <title>SLM PRACTICE - NIGER</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css">
     @yield('css')
+    <link href="{{ asset('/css/custom.css') }}" rel="stylesheet" type="text/css" >
 </head>
 
 <body class="skin-blue sidebar-mini">
@@ -24,7 +25,7 @@
 
         <!-- Logo -->
         <a href="#" class="logo">
-            <b>InfyOm</b>
+            <b>SLM PRACTICE </b>
         </a>
 
         <!-- Header Navbar -->
@@ -88,7 +89,7 @@
 
     <!-- Main Footer -->
     <footer class="main-footer" style="max-height: 100px;text-align: center">
-        <strong>Copyright © 2016 <a href="http://infyom.com" target="_blank">InfyOm Technologies</a>.</strong> All rights reserved.
+        <strong>Copyright © {{ date('Y') }} <a href="#" target="_blank">Sustanaible Land Management Practice</a>.</strong> All rights reserved.
     </footer>
 
 </div>

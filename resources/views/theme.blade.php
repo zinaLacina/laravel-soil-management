@@ -10,7 +10,7 @@
 		<link rel="icon" href="favicon.ico">
 		<title>SLM PRACTICE - NIGER</title>
 		<!-- Bootstrap core CSS -->
-		<link href="{{ asset('/theme/css/bootstrap.min.css') }}" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<!-- Custom styles for this template -->
 		<link href="{{ asset('/theme/css/owl.carousel.css') }}" rel="stylesheet">
@@ -37,37 +37,38 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand page-scroll" href="#page-top"><img src="{{ asset('/theme/images/logo.png') }}" alt="Lattes theme logo"></a>
+					<a class="navbar-brand page-scroll" href="#page-top"><img src="images/logo.png" alt="Lattes theme logo"></a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-                        @if (Route::has('login'))
-                            {{-- @if (Auth::check()) --}}
-                                <li class="hidden">
-                                    <a href="#page-top"></a>
-                                </li>
-                                <li><a href="{{ url('/') }}">Home</a></li>
-                                <li>
-                                    <a class="page-scroll" href="#about">About</a>
-                                </li>
-                                <li>
-                                    <a class="page-scroll" href="#services">Services</a>
-                                </li>
-                                <li>
-                                    <a class="page-scroll" href="#portfolio">Portfolio</a>
-                                </li>
-                                <li>
-                                    <a class="page-scroll" href="#team">Team</a>
-                                </li>
-                                <li>
-                                    <a class="page-scroll" href="#contact">Contact</a>
-                                </li>
-						        
-                            {{-- @else --}}
-                                <li><a href="{{ url('/login') }}">Login</a></li>
-                                <li><a href="{{ url('/register') }}">Register</a></li>
-                            {{-- @endif --}}
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#about">About</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#services">Services</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#portfolio">Portfolio</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#team">Team</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#contact">Contact</a>
+						</li>
+						@if (Route::has('login'))
+							<div class="top-right links">
+								@if (Auth::check())
+									<li><a href="{{ url('/home') }}">Home</a></li>
+								@else
+								<li><a href="{{ url('/login') }}">Login</a></li>
+								<li><a href="{{ url('/register') }}">Register</a></li>
+								@endif
+							</div>
 						@endif
 					</ul>
 				</div>
@@ -80,8 +81,8 @@
 			<div class="container">
 				<div class="slider-container">
 					<div class="intro-text">
-						<div class="intro-lead-in">Welcome To Our Website of!</div>
-						<div class="intro-heading">Sustainable Land Management Technologies </div>
+						<div class="intro-lead-in">Welcome To Our Studio!</div>
+						<div class="intro-heading">It's Nice To Meet You</div>
 						<a href="#about" class="page-scroll btn btn-xl">Tell Me More</a>
 					</div>
 				</div>
@@ -249,7 +250,7 @@
 				<div class="col-md-4">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="{{ asset('/theme/images/demo/portfolio-1.jpg') }}" alt="img02" class="img-responsive" />
+							<img src="images/demo/portfolio-1.jpg" alt="img02" class="img-responsive" />
 							<figcaption>
 								<h2>Dean & Letter</h2>
 								<p>Branding, Design</p>
@@ -263,7 +264,7 @@
 				<div class="col-md-4">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="{{ asset('/theme/images/demo/portfolio-2.jpg') }}" alt="img02" class="img-responsive" />
+							<img src="images/demo/portfolio-2.jpg" alt="img02" class="img-responsive" />
 							<figcaption>
 								<h2>Startup Framework</h2>
 								<p>Branding, Web Design</p>
@@ -277,7 +278,7 @@
 				<div class="col-md-4">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="{{ asset('/theme/images/demo/portfolio-3.jpg') }}" alt="img02" class="img-responsive" />
+							<img src="images/demo/portfolio-3.jpg" alt="img02" class="img-responsive" />
 							<figcaption>
 								<h2>Lamp & Velvet</h2>
 								<p>Branding, Web Design</p>
@@ -293,7 +294,7 @@
 				<div class="col-md-4">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="{{ asset('/theme/images/demo/portfolio-4.jpg') }}" alt="img02" class="img-responsive" />
+							<img src="images/demo/portfolio-4.jpg" alt="img02" class="img-responsive" />
 							<figcaption>
 								<h2>Smart Name</h2>
 								<p>Branding, Design</p>
@@ -307,7 +308,7 @@
 				<div class="col-md-4">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="{{ asset('/theme/images/demo/portfolio-5.jpg') }}" alt="img02" class="img-responsive" />
+							<img src="images/demo/portfolio-5.jpg" alt="img02" class="img-responsive" />
 							<figcaption>
 								<h2>Fast People</h2>
 								<p>Branding, Web Design</p>
@@ -321,7 +322,7 @@
 				<div class="col-md-4">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="{{ asset('/theme/images/demo/portfolio-2.jpg') }}" alt="img02" class="img-responsive" />
+							<img src="images/demo/portfolio-2.jpg" alt="img02" class="img-responsive" />
 							<figcaption>
 								<h2>Kites & Stars</h2>
 								<p>Branding, Web Design</p>
@@ -348,25 +349,25 @@
 					<div class="col-lg-12 text-center">
 						<div class="owl-carousel">
 							<div class="item">
-								<div class="partner-logo"><img src="{{ asset('/theme/images/demo/partners-1.png') }}" alt="partners"></div>
+								<div class="partner-logo"><img src="images/demo/partners-1.png" alt="partners"></div>
 							</div>
 							<div class="item">
-								<div class="partner-logo"><img src="{{ asset('/theme/images/demo/partners-2.png') }}" alt="partners"></div>
+								<div class="partner-logo"><img src="images/demo/partners-2.png" alt="partners"></div>
 							</div>
 							<div class="item">
-								<div class="partner-logo"><img src="{{ asset('/theme/images/demo/partners-3.png') }}" alt="partners"></div>
+								<div class="partner-logo"><img src="images/demo/partners-3.png" alt="partners"></div>
 							</div>
 							<div class="item">
-								<div class="partner-logo"><img src="{{ asset('/theme/images/demo/partners-4.png') }}" alt="partners"></div>
+								<div class="partner-logo"><img src="images/demo/partners-4.png" alt="partners"></div>
 							</div>
 							<div class="item">
-								<div class="partner-logo"><img src="{{ asset('/theme/images/demo/partners-5.png') }}" alt="partners"></div>
+								<div class="partner-logo"><img src="images/demo/partners-5.png" alt="partners"></div>
 							</div>
 							<div class="item">
-								<div class="partner-logo"><img src="{{ asset('/theme/images/demo/partners-6.png') }}" alt="partners"></div>
+								<div class="partner-logo"><img src="images/demo/partners-6.png" alt="partners"></div>
 							</div>
 							<div class="item">
-								<div class="partner-logo"><img src="{{ asset('/theme/images/demo/partners-7.png') }}" alt="partners"></div>
+								<div class="partner-logo"><img src="images/demo/partners-7.png" alt="partners"></div>
 							</div>
 						</div>
 					</div>
@@ -388,7 +389,7 @@
 					<div class="col-md-3">
 						<div class="team-item">
 							<div class="team-image">
-								<img src="{{ asset('/theme/images/demo/author-2.jpg') }}" class="img-responsive" alt="author">
+								<img src="images/demo/author-2.jpg" class="img-responsive" alt="author">
 							</div>
 							<div class="team-text">
 								<h3>TOM BEKERS</h3>
@@ -403,7 +404,7 @@
 					<div class="col-md-3">
 						<div class="team-item">
 							<div class="team-image">
-								<img src="{{ asset('/theme/images/demo/author-6.jpg') }}" class="img-responsive" alt="author">
+								<img src="images/demo/author-6.jpg" class="img-responsive" alt="author">
 							</div>
 							<div class="team-text">
 								<h3>LINA GOSATA</h3>
@@ -418,7 +419,7 @@
 					<div class="col-md-3">
 						<div class="team-item">
 							<div class="team-image">
-								<img src="{{ asset('/theme/images/demo/author-3.jpg') }}" class="img-responsive" alt="author">
+								<img src="images/demo/author-3.jpg" class="img-responsive" alt="author">
 							</div>
 							<div class="team-text">
 								<h3>Larry Parker</h3>
@@ -433,7 +434,7 @@
 					<div class="col-md-3">
 						<div class="team-item">
 							<div class="team-image">
-								<img src="{{ asset('/theme/images/demo/author-4.jpg') }}" class="img-responsive" alt="author">
+								<img src="images/demo/author-4.jpg" class="img-responsive" alt="author">
 							</div>
 							<div class="team-text">
 								<h3>John BEKERS</h3>
@@ -511,9 +512,8 @@
 		</p>
 		<footer>
 			<div class="container text-center">
-				{{-- <p>Designed by <a href="http://moozthemes.com"><span>MOOZ</span>Themes.com</a></p> --}}
-                <p>Copyright © {{ date('Y') }} <a href="#" target="_blank">Sustanaible Land Management Practice</a>.</strong> All rights reserved.</p>
-            </div>
+				<p>Designed by <a href="http://moozthemes.com"><span>MOOZ</span>Themes.com</a></p>
+			</div>
 		</footer>
 
 		<!-- Modal for portfolio item 1 -->

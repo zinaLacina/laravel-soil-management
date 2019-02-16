@@ -1,0 +1,20 @@
+.skin-blue .main-header .logo {
+    background-color: green;
+    color: #fff;
+    border-bottom: 0 solid transparent;
+}
+.skin-blue .main-header .logo:hover {
+    background-color: green;
+    color: #fff;
+    border-bottom: 0 solid transparent;
+}
+.skin-blue .main-header .navbar {
+    background-color: #008300;
+}
+
+.login-page, .register-page {
+    /* background: url(../images/background.jpg); */
+    background-image: url("/images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
